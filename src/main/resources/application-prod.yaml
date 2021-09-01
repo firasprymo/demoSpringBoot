@@ -1,0 +1,29 @@
+info:
+    app:
+        description: Master Spring Boot
+        name: Spring Boot Master Class Course
+        version: 1.0.0
+    company:
+        name: Amigoscode
+management:
+    endpoint:
+        health:
+            show-details: always
+    endpoints:
+        web:
+            exposure:
+                include: health,info,promotheus
+server:
+    error:
+        include-binding-errors: always
+        include-message: always
+        include-stacktrace: on_trace_param
+spring:
+    datasource:
+        driveClassName: org.h2.Driver
+        password: hello
+        url: jdbc:h2:mem:testdb-dev-environment
+        username: hello
+    h2:
+        console:
+            enabled: true
